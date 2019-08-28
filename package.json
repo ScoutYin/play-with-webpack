@@ -2,7 +2,7 @@
   "name": "play-with-webpack",
   "version": "1.0.0",
   "description": "从0开始搭建一个webpack脚手架",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ScoutYin/play-with-webpack/issues"
   },
-  "homepage": "https://github.com/ScoutYin/play-with-webpack#readme"
+  "homepage": "https://github.com/ScoutYin/play-with-webpack#readme",
+  "dependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
 }

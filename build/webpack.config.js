@@ -2,6 +2,8 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
+const config = require('../config')
+
 const resolve = (dir) => {
 	return path.resolve(__dirname, '..', dir)
 }
@@ -10,7 +12,8 @@ module.exports = {
 	entry: './src/core/index.js',
 	output: {
 		filename: 'bundle.js',
-		path: resolve('dist')
+		path: config.prod.assetsRoot,
+		publicPath: config.prod.assetsPublicPath
 	},
 	module: {
 		rules: [

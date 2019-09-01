@@ -15,6 +15,11 @@ module.exports = {
 		path: config.prod.assetsRoot,
 		publicPath: config.prod.assetsPublicPath
 	},
+	resolve: {
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
+	},
 	module: {
 		rules: [
 			{

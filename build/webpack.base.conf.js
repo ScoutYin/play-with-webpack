@@ -9,7 +9,7 @@ const resolve = (dir) => {
 }
 
 module.exports = {
-	entry: './src/core/index.js',
+	entry: './src/main.js',
 	output: {
 		filename: 'bundle.js',
 		path: config.prod.assetsRoot,
@@ -19,6 +19,9 @@ module.exports = {
 		alias: {
 			'vue$': 'vue/dist/vue.esm.js'
 		}
+	},
+	devServer: {
+		contentBase: '../dist'
 	},
 	module: {
 		rules: [

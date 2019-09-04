@@ -1,6 +1,7 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = require('../config')
 
@@ -13,7 +14,7 @@ module.exports = {
 	output: {
 		filename: 'bundle.js',
 		path: config.prod.assetsRoot,
-		publicPath: config.prod.assetsPublicPath
+		publicPath: config.prod.assetsPublicPath // 决定了打包后html中引入文件的基础路径
 	},
 	resolve: {
 		alias: {
@@ -40,6 +41,10 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		// if you got following error, you probably use vue-loader v15, so you have to use an extra plugin: VueLoaderPlugin
 		// `vue-loader was used without the corresponding plugin. Make sure to include VueLoaderPlugin in your webpack config.`
-		new VueLoaderPlugin()
+		new VueLoaderPlugin(),
+		new HtmlWebpackPlugin({
+			title: 'Play with webpack',
+			template: 'index.html'
+		})
 	]
 }

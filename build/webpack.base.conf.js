@@ -23,7 +23,12 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			'vue$': 'vue/dist/vue.esm.js'
+			'vue$': 'vue/dist/vue.esm.js',
+			'@components': resolve('src/components'),
+			'@constants': resolve('src/constants'),
+			'@pages': resolve('src/pages'),
+			'@router': resolve('src/router'),
+			'@utils': resolve('src/utils')
 		}
 	},
 	devServer: {
@@ -45,7 +50,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		// new CleanWebpackPlugin(),
+		new CleanWebpackPlugin(),
 		// if you got following error, you probably use vue-loader v15, so you have to use an extra plugin: VueLoaderPlugin
 		// `vue-loader was used without the corresponding plugin. Make sure to include VueLoaderPlugin in your webpack config.`
 		new VueLoaderPlugin(),

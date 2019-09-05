@@ -1,12 +1,18 @@
 <template>
-<div>这是hello 组件</div>
+<div>
+	这是hello 组件
+	<br>
+	2的立方是 {{ cube(2) }}
+</div>
 </template>
 
 <script>
+import { cube } from '@utils/index'
+
 export default {
 	name: 'hello',
-	created() {
-		console.log('hello created');
+	methods: {
+		cube
 	}
 }
 </script>

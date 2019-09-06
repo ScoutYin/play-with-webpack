@@ -12,7 +12,6 @@ const resolve = (dir) => {
 }
 
 module.exports = {
-	mode: 'development',
 	entry: './src/main.js',
 	output: {
 		filename: 'bundle.js',
@@ -30,11 +29,6 @@ module.exports = {
 			'@router': resolve('src/router'),
 			'@utils': resolve('src/utils')
 		}
-	},
-	devServer: {
-		contentBase: '/',
-		hot: true,
-		port: 8000
 	},
 	module: {
 		rules: [

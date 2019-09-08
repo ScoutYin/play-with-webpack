@@ -4,7 +4,8 @@
   "description": "从0开始搭建一个webpack脚手架",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.js --open",
+    "start": "npm run dev",
+    "dev": "NODE_ENV=development webpack-dev-server --inline --progress --config ./build/webpack.dev.js --open",
     "build": "webpack --config ./build/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

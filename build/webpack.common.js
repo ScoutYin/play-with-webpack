@@ -4,6 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = require('../config')
+const vueLoaderConfig = require('./vue-loader.conf')
 
 const ENV_IS_DEV = process.env.NODE_ENV === 'development'
 
@@ -39,7 +40,8 @@ module.exports = {
 			},
 			{
 				test: /\.vue$/,
-				use: 'vue-loader'
+				use: 'vue-loader',
+				options: vueLoaderConfig
 			}
 		]
 	},

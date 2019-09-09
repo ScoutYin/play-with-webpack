@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const commonConfig = require('./webpack.common')
 
 module.exports = merge(commonConfig, {
@@ -12,6 +13,7 @@ module.exports = merge(commonConfig, {
 		}),
 		new UglifyJSPlugin({
 			sourceMap: true
-		})
+		}),
+		new MiniCssExtractPlugin('style.css')
 	]
 })

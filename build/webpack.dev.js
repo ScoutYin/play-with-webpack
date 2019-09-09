@@ -1,8 +1,10 @@
 const merge = require('webpack-merge')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const commonConfig = require('./webpack.common')
+const utils = require('./utils')
+const config = require('../config')
 
-module.exports = merge(commonConfig, {
+const devConfig = merge(commonConfig, {
 	mode: 'development',
 	devtool: 'inline-source-map',
 	devServer: {
@@ -10,6 +12,10 @@ module.exports = merge(commonConfig, {
 		hot: true,
 		port: 8000,
 		quiet: true
+	},
+
+	module: {
+		rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostcss: false })
 	},
 	plugins: [
 		// 需要devServer配合 quiet: true
@@ -31,3 +37,6 @@ module.exports = merge(commonConfig, {
 		})
 	]
 })
+
+console.log(devConfig.module.rules);
+module.exports = devConfig

@@ -35,12 +35,12 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				use: 'babel-loader',
+				loader: 'babel-loader',
 				include: [resolve('src')]
 			},
 			{
 				test: /\.vue$/,
-				use: 'vue-loader',
+				loader: 'vue-loader',
 				options: vueLoaderConfig
 			}
 		]

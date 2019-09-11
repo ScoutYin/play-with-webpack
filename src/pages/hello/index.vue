@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="hello">
 	这是hello 组件
 	<br>
 	2的立方是 {{ cube(2) }}
@@ -17,6 +17,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.hello {
+	font-size: 20px;
+	color: #5495f6;
+}
 </style>

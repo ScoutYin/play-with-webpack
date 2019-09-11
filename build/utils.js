@@ -28,7 +28,7 @@ exports.cssLoaders = (options = {}) => {
 			})
 		}
 
-		return options.extraCss
+		return options.extractCss
 			? [MiniCssExtractPlugin.loader, ...loaders]
 			: ['vue-style-loader', ...loaders]
 	}

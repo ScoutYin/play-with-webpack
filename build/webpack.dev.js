@@ -38,5 +38,4 @@ const devConfig = merge(commonConfig, {
 	]
 })
 
-console.log(devConfig.module.rules);
 module.exports = devConfig

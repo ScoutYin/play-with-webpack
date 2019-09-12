@@ -11,7 +11,13 @@ module.exports = {
 		sourceMap: cssSourceMap
 	}),
 	cssSourceMap: cssSourceMap,
-  	cacheBusting: config.dev.cacheBusting,
+	// 将遇到的资源 URL 转换为 webpack 模块请求
+	// 比如 <img src="../image.png"> 将会被编译成为：
+	// createElement('img', {
+	// attrs: {
+	// 	src: require('../image.png') // 现在这是一个模块的请求了
+	// }
+	// })
   	transformToRequire: {
 		video: ['src', 'poster'],
 		source: 'src',

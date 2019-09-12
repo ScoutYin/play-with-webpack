@@ -19,6 +19,8 @@ module.exports = merge(commonConfig, {
 		new UglifyJSPlugin({
 			sourceMap: true
 		}),
-		new MiniCssExtractPlugin('style.css')
+		new MiniCssExtractPlugin({
+			filename: 'style.css'
+		})
 	]
 })

@@ -1,5 +1,6 @@
 const merge = require('webpack-merge')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin')
 const commonConfig = require('./webpack.common')
 const utils = require('./utils')
 const config = require('../config')
@@ -34,6 +35,12 @@ const devConfig = merge(commonConfig, {
 			// add formatters and transformers (see below)
   			additionalFormatters: [],
   			additionalTransformers: []
+		}),
+		new StylelintPlugin({
+			files: '**/*.s?(a|c)ss',
+			// true 以error形式提示  false以警告形式提示
+			// https://github.com/webpack-contrib/stylelint-webpack-plugin#emiterrors
+			emitErrors: false
 		})
 	]
 })

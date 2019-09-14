@@ -20,6 +20,6 @@ export default {
 <style lang="scss">
 .hello {
 	font-size: 20px;
-	color: #5495f6;
+	color: $main;
 }
 </style>

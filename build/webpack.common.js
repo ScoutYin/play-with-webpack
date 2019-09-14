@@ -28,7 +28,8 @@ module.exports = {
 			'@constants': resolve('src/constants'),
 			'@pages': resolve('src/pages'),
 			'@router': resolve('src/router'),
-			'@utils': resolve('src/utils')
+			'@utils': resolve('src/utils'),
+			'@assets': resolve('src/assets')
 		}
 	},
 	module: {

@@ -1,3 +1,4 @@
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 exports.cssLoaders = (options = {}) => {
@@ -15,17 +16,31 @@ exports.cssLoaders = (options = {}) => {
 		}
 	}
 
+	/**
+	 * 生成sass-loader的prependData的 @import 
+	 * @param {Array} files eg. ['var.scss']
+	 */
+	const generateSassPrependData = (files) => {
+		const urls = files.map(it => path.join('~@assets/style/', it))
+		return urls.map(it => `@import '${it}';`).join('\n')
+	}
+
 	const generateLoaders = (loader, loaderOptions) => {
 		const loaders = options.usePostcss ? [cssLoader, postcssLoader] : [cssLoader]
 
 		if (loader) {
-			loaders.push({
+			const loaderItem = {
 				loader: `${loader}-loader`,
 				options: {
 					...loaderOptions,
 					sourceMap: options.sourceMap
 				}
-			})
+			}
+			// sass-loader 可配置prependData
+			if (loader === 'sass') {
+				loaderItem.options.prependData = generateSassPrependData(['var.scss'])
+			}
+			loaders.push(loaderItem)
 		}
 
 		return options.extractCss

@@ -1,16 +1,16 @@
 <template>
-<div class="hello">
-	这是hello 组件
-	<br>
-	2的立方是 {{ cube(2) }}
-</div>
+  <div class="hello">
+    这是hello
+    <br>
+    2的立方是 {{ cube(2) }}
+  </div>
 </template>
 
 <script>
 import { cube } from '@utils/index'
 
 export default {
-	name: 'hello',
+	name: 'Hello',
 	methods: {
 		cube
 	}

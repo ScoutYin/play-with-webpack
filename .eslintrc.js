@@ -25,7 +25,8 @@ module.exports = {
 	extends: [
 		// 四个级别： base/essential/strongly-recommended/recommended, 使用最高约束
 		// https://vuejs.github.io/eslint-plugin-vue
-		'plugin:vue/recommended'
+		'plugin:vue/recommended',
+		'standard'
 	],
 	plugins: [
 		'vue'

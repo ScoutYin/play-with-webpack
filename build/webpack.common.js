@@ -22,6 +22,7 @@ module.exports = {
 			: config.prod.assetsPublicPath // 决定了打包后html中引入文件的基础路径
 	},
 	resolve: {
+		extensions: ['.js', '.vue', '.json'],
 		alias: {
 			'vue$': 'vue/dist/vue.esm.js',
 			'@components': resolve('src/components'),
@@ -38,7 +39,8 @@ module.exports = {
 				test: /\.(js|vue)$/,
 				loader: 'eslint-loader',
 				enforce: 'pre',
-				include: [resolve('src')]
+				include: [resolve('src')],
+				exclude: [resolve('node_modules')]
 			},
 			{
 				test: /\.js$/,

@@ -31,5 +31,8 @@ module.exports = {
 	plugins: [
 		'vue'
 	],
-	rules: {}
+	rules: {
+		// allow async-await
+		'generator-star-spacing': 'off',
+	}
 }

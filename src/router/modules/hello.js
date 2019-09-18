@@ -4,4 +4,4 @@ export default [
 		name: 'hello',
 		component: () => import('../../pages/hello/index.vue')
 	}
-] 
+]

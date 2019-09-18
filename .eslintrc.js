@@ -32,7 +32,18 @@ module.exports = {
 		'vue'
 	],
 	rules: {
+		// <div/>
+		'vue/html-closing-bracket-spacing': [
+			'warn',
+			{
+				selfClosingTag: 'never'
+			}
+		],
 		// allow async-await
 		'generator-star-spacing': 'off',
+		'no-tabs': 'off',
+		'semi': 'off',
+		'no-mixed-spaces-and-tabs': 'error',
+		'indent': ['error', 'tab']
 	}
 }

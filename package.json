@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "npm run dev",
-    "dev": "NODE_ENV=development webpack-dev-server --inline --progress --config ./build/webpack.dev.js --open",
+    "dev": "NODE_ENV=development webpack-dev-server --inline --progress --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -36,6 +36,7 @@
     "eslint-loader": "^3.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.2.3",
     "friendly-errors-webpack-plugin": "^1.7.0",

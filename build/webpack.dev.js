@@ -22,7 +22,7 @@ const devConfig = merge(commonConfig, {
 		// 需要devServer配合 quiet: true
 		new FriendlyErrorsPlugin({
 			compilationSuccessInfo: {
-				messages: ['You application is running here: http://localhost:8000'],
+				messages: ['Your application is running here: http://localhost:8000'],
 				notes: ['Success!']
 			},
 			onErrors: function (severity, errors) {

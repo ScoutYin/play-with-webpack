@@ -16,7 +16,7 @@ const devConfig = merge(commonConfig, {
 	},
 
 	module: {
-		rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostcss: false })
+		rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostcss: true })
 	},
 	plugins: [
 		// 需要devServer配合 quiet: true

@@ -10,7 +10,7 @@ module.exports = merge(commonConfig, {
 	mode: 'production',
 	devtool: 'source-map',
 	module: {
-		rules: utils.styleLoaders({ sourceMap: config.prod.cssSourceMap, usePostcss: false })
+		rules: utils.styleLoaders({ sourceMap: config.prod.cssSourceMap, usePostcss: true })
 	},
 	plugins: [
 		new webpack.DefinePlugin({

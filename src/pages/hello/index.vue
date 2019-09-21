@@ -20,6 +20,7 @@ export default {
 <style lang="scss">
 .hello {
 	font-size: 20px;
-    color: $main;
+  color: $main;
+  transform: translate(20px); // test autoprefixer
 }
 </style>

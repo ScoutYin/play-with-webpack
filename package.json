@@ -44,6 +44,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "stylelint": "^10.1.0",
@@ -60,5 +61,10 @@
   },
   "sideEffects": [
     "./src/utils/index.js"
+  ],
+  "browserslist": [
+    "> 1%",
+    "IE > 8",
+    "last 2 versions"
   ]
 }

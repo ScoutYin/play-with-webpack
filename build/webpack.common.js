@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -64,5 +65,11 @@ module.exports = {
 			inject: 'body', // 指定将资源放在index.html中哪个地方引入，true | body（默认）会把script放在body的底部，还有head或者false
 			template: 'index.html'
 		})
-	]
+	],
+	optimization: {
+		// webpack.optimize.CommonsChunkPlugin has been removed, please use config.optimization.splitChunks instead
+		splitChunks: {
+			name: 'commnon' // 指定公共bundle的名称
+		}
+	}
 }

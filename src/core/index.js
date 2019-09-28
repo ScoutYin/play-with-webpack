@@ -12,3 +12,12 @@ const app = new Vue({
 })
 
 window.app = app
+
+const bar = {
+	a: {
+		b: 1
+	}
+}
+
+const b = bar?.c?.b
+console.log(b);

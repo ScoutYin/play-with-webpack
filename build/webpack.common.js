@@ -67,6 +67,7 @@ module.exports = {
 		})
 	],
 	optimization: {
+		minimize: false,
 		// webpack.optimize.CommonsChunkPlugin has been removed, please use config.optimization.splitChunks instead
 		splitChunks: {
 			name: 'commnon' // 指定公共bundle的名称

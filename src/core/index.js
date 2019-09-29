@@ -8,7 +8,14 @@ const app = new Vue({
 	el: '#app',
 	router,
 	components: { App },
-	template: '<App/>'
+	// template: '<App/>',
+	render (h) {
+		return (
+			<div id="app">
+				<App/>
+			</div>
+		)
+	}
 })
 
 window.app = app

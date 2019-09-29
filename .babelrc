@@ -4,7 +4,9 @@
 	],
 	"plugins": [
 		"@babel/plugin-proposal-optional-chaining", // 支持更多超前的新特性、语法 比如 a?.b?.c
-		"@babel/plugin-syntax-dynamic-import"
+		"@babel/plugin-syntax-dynamic-import",
+		"syntax-jsx",
+		"transform-vue-jsx"
 	]
 }
     
